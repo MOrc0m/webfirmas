@@ -1,0 +1,565 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "avenir";
+  src: url(/assets/fonts/AvenirLTStd-Medium.otf);
+}
+@font-face {
+  font-family: "avenir-bold";
+  src: url(/assets/fonts/AvenirNextLTPro-Bold.otf);
+}
+@font-face {
+  font-family: "helvetica";
+  src: url(/assets/fonts/Helvetica55.ttf);
+}
+@font-face {
+  font-family: "roboto";
+  src: url(/assets/fonts/RobotoCondensed.ttf);
+}
+@font-face {
+  font-family: "lato";
+  src: url(/assets/fonts/Lato-Regular.ttf);
+}
+html {
+  min-height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: #2E8B57;
+  width: 100%;
+  height: 78px;
+}
+
+.imagen {
+  background-image: url(/assets/img/orgas-sociales.jpg);
+  background-position: center bottom;
+  background-size: cover;
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+}
+
+.subtitulo {
+  font-size: 3.5rem; 
+  font-family: "roboto";
+  text-align: center;
+  margin-left: 15%;
+  margin-right: 15%;
+  color: black;
+}
+
+#cajanav {
+  align-items: center;
+  height: 78px;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 2fr 1fr;
+}
+#cajanav .titulo {
+  font-family: "avenir-bold";
+  color: white;
+  padding-top: 5px;
+  margin-left: 15vw;
+}
+#cajanav .botonera-navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+#cajanav .botonera-navbar #navbar {
+  display: flex;
+  justify-content: flex-end;
+}
+#cajanav .botonera-navbar #navbar a {
+  font-family: "helvetica";
+  font-size: 1.2rem;
+  margin: 15px;
+  color: white;
+  text-decoration: none;
+}
+#cajanav .botonera-navbar #navbar a:hover {
+  background-color: #3ffa84;
+  color: black;
+}
+#cajanav .botonera-navbar .translate {
+  position: absolute;
+}
+#cajanav .botonera-navbar .translate .ico-translate {
+  position: relative;
+  width: 15px;
+  right: -64px;
+  top: 9px;
+  z-index: 1000;
+}
+#cajanav .botonera-navbar .select-lenguaje {
+  font-family: "helvetica";
+  font-size: 14px;
+  margin: 15px;
+  
+  appearance: none;
+  outline: 10px #2E8B57;
+  border: 0;
+  box-shadow: none;
+
+  flex: 1;
+  padding: 0 1em;
+  color: #fff;
+  background-color: #2E8B57;
+  background-image: none;
+  cursor: pointer;
+
+}
+#cajanav .botonera-navbar .select-lenguaje::-ms-expand {
+  display: none;
+}
+#cajanav .botonera-navbar .select-lenguaje {
+  position: relative;
+  display: flex;
+  width: 93px;
+  height: 3em;
+  border-radius: 0.25em;
+  overflow: hidden;
+}
+#cajanav .botonera-navbar .select-lenguaje::after {
+  content: "▼";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  background-color: #2E8B57;
+  transition: 0.25s all ease;
+  pointer-events: none;
+}
+#cajanav .botonera-navbar .select-lenguaje:hover::after {
+  color: #3ffa84;
+}
+#cajanav .botonera-navbar .select-lenguaje:focus {
+  background-color: #2E8B57;
+}
+#cajanav .botonera-navbar .select-lenguaje option {
+  outline-color: green;
+  border: none;
+  appearance: none;
+}
+
+label {
+  display: inline-block;
+}
+
+h3 {
+  text-align: center;
+}
+
+#registroForm {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fabc3f;
+  min-height: auto; 
+  border-radius: 3px;
+  margin: 10px;
+  box-shadow: 0 0.5rem 0.5rem 0 rgba(30, 29, 29, 0.182);
+  padding-left: 15px;
+  padding-right: 25px;
+  margin-bottom: 4rem;
+  gap: 30px;
+  transition: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+#registroForm #titform {
+  font-family: "avenir-bold";
+  font-size: 33px;
+}
+#registroForm form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#registroForm form #formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+#registroForm form #formulario input {
+  font-family: "roboto";
+  font-size: 16px;
+  width: 90%;
+  height: 35px;
+  min-width: 140px;
+  max-width: 300px;
+}
+#registroForm form #formulario #concenti {
+  font-family: "avenir";
+  margin-top: 10px;
+}
+#registroForm form .botonera-footer-form {
+  width: 80%;
+  max-width: 400px;
+  min-width: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+#registroForm form .botonera-footer-form input {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  border-radius: 15px;
+  border: 1px solid black;
+  width: 100%;
+}
+#registroForm form .botonera-footer-form .btn-tipo-entidad {
+  height: 45px;
+  background-color: lightskyblue;
+}
+#registroForm form .botonera-footer-form .btn-tipo-entidad:hover {
+  background-color: rgb(104, 104, 255);
+  color: white;
+}
+#registroForm form .botonera-footer-form .btn-tipo-entidad:active {
+  background-color: lightyellow;
+  color: black;
+  font-weight: bold;
+}
+#registroForm form .botonera-footer-form .btn-guardar {
+  margin-top: 2rem;
+  height: 65px;
+  background-color: lightgreen;
+}
+#registroForm form .botonera-footer-form .btn-guardar:hover {
+  background-color: rgb(1, 209, 1);
+}
+#registroForm form .botonera-footer-form .btn-guardar:active {
+  background-color: lightyellow;
+  font-weight: bold;
+}
+
+#registroForm:hover {
+  box-shadow: 0 0.7rem 1rem 0 rgba(0, 0, 0, 0.444);
+}
+
+.error {
+  font-size: 0.5rem;
+}
+
+.body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  margin: 0;
+  font-size: 16px;
+}
+
+#llamadoalaccion {
+  font-family: "roboto";
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 3rem;
+}
+
+#main {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  height: auto; 
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+table {
+  margin-top: 0;
+  padding-top: 0;
+  empty-cells: show;
+  border-collapse: collapse;
+  width: 100%; 
+}
+
+table,
+th,
+td {
+  border: 1px solid black; 
+  padding: 10px; 
+  text-align: left; 
+}
+
+footer {
+  background-color: #2E8B57;
+  color: rgb(230, 225, 225);
+  text-align: center;
+  padding: 0.625rem; 
+  margin: 0;
+  font-family: "helvetica";
+}
+
+.enlaces {
+  text-decoration: none;
+  color: rgb(230, 225, 225);
+  margin: 5px;
+  border-radius: 3px;
+  transition: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+.enlaces:hover {
+  background-color:#3ffa84;
+  text-decoration: underline;
+  text-decoration: underline;
+  text-decoration: none;
+  color: black;
+  padding: 13px;
+  border-radius: 5px;
+}
+
+@media (max-width: 320px) {
+  #navbar {
+    width: 90%;
+  }
+  #main {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 480px) {
+  #navbar {
+    width: 100%;
+  }
+  #main {
+    grid-template-columns: 1fr;
+  }
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  .titulo {
+    font-size: 1em;
+  }
+  .imagen {
+    background-position: center;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+  .subtitulo {
+    font-size: 1.6rem;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+  }
+}
+@media (max-width: 640px) and (min-width: 569px) {
+  #cajanav .botonera-navbar #navbar {
+    width: 100%;
+  }
+  #cajanav .botonera-navbar #navbar a {
+    font-size: 1rem;
+    margin: 10px;
+  }
+  #main {
+    grid-template-columns: 1fr;
+  }
+  #card {
+    width: 95%;
+    height: auto;
+    font-size: 0.9rem;
+  }
+  .titulo {
+    font-size: 1em;
+  }
+  .subtitulo {
+    font-size: 1.9rem; 
+  }
+  .declaracion {
+    font-size: 1rem; 
+  }
+}
+@media (max-width: 768px) and (min-width: 641px) {
+  #navbar {
+    width: 100%;
+  }
+  #main {
+    grid-template-columns: 1fr;
+  }
+  #card {
+    width: 100%;
+    height: auto;
+    font-size: 1rem; 
+  .titulo {
+    font-size: 1.5em;
+  }
+  .subtitulo {
+    font-size: 1.8rem; 
+  }
+  .declaracion {
+    font-size: 1.2rem; 
+  }
+}
+@media (min-width: 1280px) and (orientation: landscape) {
+  #navbar {
+    width: 100%;
+  }
+  #main {
+    grid-template-columns: 1fr 1fr;
+  }
+  #card {
+    width: 80%;
+    height: auto;
+    font-size: 1.1rem; 
+  }
+  .subtitulo {
+    font-size: 2.2rem; 
+  }
+  .declaracion {
+    font-size: 1.6rem; 
+  }
+}
+@media (min-width: 1280px) and (orientation: portrait) {
+  #navbar {
+    width: 100%;
+  }
+  #main {
+    grid-template-columns: 1fr;
+  }
+  #card {
+    width: 80%;
+    height: auto;
+    font-size: 1.1rem; 
+  }
+  .subtitulo {
+    font-size: 2.2rem; 
+  }
+  .declaracion {
+    font-size: 1.6rem; 
+  }
+}
+@media (max-width: 1024px) and (orientation: landscape) {
+  #navbar {
+    width: 100%;
+  }
+  #main {
+    grid-template-columns: 1fr 1fr;
+  }
+  #card {
+    width: 100%;
+    height: auto;
+    font-size: 1.1rem; 
+  }
+  .subtitulo {
+    font-size: 2rem;
+  }
+  .declaracion {
+    font-size: 1.4rem; 
+  }
+}
+@media (min-width: 1024px) and (orientation: portrait) {
+  #navbar {
+    width: 100%;
+  }
+  #main {
+    grid-template-columns: 1fr;
+  }
+  #card {
+    width: 80%;
+    height: auto;
+    font-size: 1.1rem; 
+  }
+  .subtitulo {
+    font-size: 2.2rem; 
+  }
+  .declaracion {
+    font-size: 1.6rem; 
+  }
+}
+@media (max-width: 1440px) and (min-width: 769px) {
+  .subtitulo {
+    font-size: 2.2rem;
+  }
+}
+@media (min-width: 1440px) and (orientation: landscape) {
+  #navbar {
+    width: 100%;
+  }
+  #main {
+    grid-template-columns: 1fr 1fr;
+  }
+  #card {
+    width: 70%;
+    height: auto;
+    font-size: 1.2rem; 
+  }
+  .subtitulo {
+    font-size: 2.4rem; 
+  }
+  .declaracion {
+    font-size: 1.8rem; 
+  }
+}
+@media (min-width: 1440px) and (orientation: portrait) {
+  #navbar {
+    width: 100%;
+  }
+  #main {
+    grid-template-columns: 1fr;
+  }
+  #card {
+    width: 80%;
+    height: auto;
+    font-size: 1.1rem; 
+  }
+  .subtitulo {
+    font-size: 2.2rem; 
+  .declaracion {
+    font-size: 1.6rem; 
+  }
+}
+
+@media screen and (max-aspect-ratio: 19.5/9) {
+    .titulo {
+        font-size: 1rem; 
+	overflow:hidden;
+	text-overflow:ellipsis;
+    }
+    }
+@media screen {
+    .titulo 
+    {overflow:hidden;
+     text-overflow:ellipsis;
+
+    }
+ }
+
+/*# sourceMappingURL=estilosform.css.map */

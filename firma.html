@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>form Declarion Clean Energy</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/estilosform.css">
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.png">
+</head>
+
+<body onload="language()">
+
+    <header>
+        <div id="cajanav">
+            <h1 class="titulo">ARGENTINA VERDE</h1>
+            <div class="botonera-navbar">
+                <nav id="navbar">
+                    <a href="index.html" class="enlaces" id="princ" data-key="princ">Home</a>
+                </nav>
+                <div>
+                    <div class="translate">
+                        <img class="ico-translate" src="/assets/svg/translate-svgrepo-com.svg" alt="translate">
+                    </div>
+                    <select class="select-lenguaje" name="lenguaje" id="select-lenguaje">
+			<option disabled selected value data-key="language">Idioma</option>    
+                        <option value="spanish" id="spanish1">Español</option>
+                        <option value="english" id="english1">English</option>
+                    </select>
+                    <!-- <input type="button" value="spanish" id="spanish1">
+                    <input type="button" value="english" id="english1"> -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="imagen">
+        <h1 class="subtitulo" data-key="titulo">¡Únete a nosotros en la promoción de la energía limpia!</h1>
+    </div>
+
+    <div class="body">
+
+        <div id="llamadoalaccion">
+
+            <p id="par1" data-key="par1">
+                ¡Sé parte de nuestra misión! Apoya nuestra demanda de un cambio global hacia soluciones de energía renovable para un futuro sostenible.
+            </p>
+
+            <p id="par2" data-key="par2">
+                Abogamos por el aumento de la inversión en tecnologías limpias, la promoción de la eficiencia energética y la adopción de prácticas sostenibles.
+            </p>
+            <p id="par3" data-key="par3">
+                Trabajar juntos por un planeta más verde es esencial. Tu firma es crucial para apoyar políticas que protejan nuestro medio ambiente y promuevan la energía limpia.
+
+            </p>
+        </div>
+        <div id="main">
+
+            <div id="registroForm">
+                <h3 id="titform" data-key="titform">
+                    Firme Aquí
+                </h3>
+
+                <form onsubmit="return formValid(event)" action="formprocess.php">
+                    <div id="formulario">
+                        <input type="text" name="nombre" id="nombre" data-key="nombre" placeholder="nombre"
+                            minlength="4" required autocomplete="off">
+                        <div class="error" id="errorNombre"></div>
+                        <br>
+                        <input type="text" name="apellido" id="ape" data-key="ape" placeholder="apellido" minlength="5"
+                            required autocomplete="off">
+                        <div class="error" id="errorApe"></div>
+                        <br>
+                        <input type="text" name="organizacion" id="org" data-key="org" placeholder="org" minlength="3"
+                            required autocomplete="off">
+                        <div class="error" id="errorOrg"></div>
+                        <br>
+                        <input type="mail" name="mail" placeholder="mail" id="mail" data-key="mail" minlength="10"
+                            required autocomplete="off">
+                        <div class="error" id="errorMail"></div>
+                        <br>
+                        <input type="number" name="dni" id="dni" data-key="dni" placeholder="document" minlength="10"
+                            required autocomplete="off">
+                        <div class="error" id="errorDni"></div>
+                        <br>
+                        <input type="checkbox" id="concent" name="concent" checked required>
+                        <label for="concent" id="concenti" data-key="concenti">¿Desea guardar los datos?</label>
+                        <div class="error" id="errorConcent"></div>
+                        <input type="hidden" id="importancia"name="importancia" value=1>
+                    </div>
+                    <div class="botonera-footer-form">
+                        <input class="btn-tipo-entidad" type="button"  value="Org form" id="orgform">
+                        <input class="btn-tipo-entidad" type="button"  value="Person form" id="person">
+                        <input class="boton btn-guardar" type="submit"  value="Submit" onclick="formValid(event)">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p class="contentfoot">Made By:<a href="https://github.com/MOrc0m" class="enlaces">M0rc0m</a></p>
+        <p class="contentfoot">Campaña<a href="https://x.com/Fridays4future" class="enlaces">Energias Limpias ARG</a></p>
+    </footer>
+
+    <script src="scriptsform.js"></script>
+</body>
+
+</html>

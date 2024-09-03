@@ -1,0 +1,602 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "avenir";
+  src: url(/assets/fonts/AvenirLTStd-Medium.otf);
+}
+@font-face {
+  font-family: "avenir-bold";
+  src: url(/assets/fonts/AvenirNextLTPro-Bold.otf);
+}
+@font-face {
+  font-family: "helvetica";
+  src: url(/assets/fonts/Helvetica55.ttf);
+}
+@font-face {
+  font-family: "roboto";
+  src: url(/assets/fonts/RobotoCondensed.ttf);
+}
+@font-face {
+  font-family: "lato";
+  src: url(/assets/fonts/Lato-Regular.ttf);
+}
+html {
+  min-height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: #2E8B57;
+  width: 100%;
+  height: 78px;
+}
+
+.imagen {
+  background-image: url(/assets/img/orgas-sociales.jpg);
+  background-position: center bottom;
+  background-size: cover;
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+}
+
+.subtitulo {
+  font-size: 4.5rem; 
+  font-family: "roboto";
+  margin-left: 15%;
+  margin-right: 15%;
+  color: black;
+}
+
+.titulo-custom {
+  font-family: "helvetica";
+  font-size: 3rem;
+  border-top: 3px solid rgba(0, 255, 0, 0.4901960784);
+  padding-top: 2rem;
+  margin-top: 0;
+  text-align: center;
+  width: 100%;
+}
+
+#cajanav {
+  align-items: center;
+  height: 78px;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 2fr 1fr;
+}
+#cajanav .titulo {
+  font-family: "avenir-bold";
+  color: white;
+  padding-top: 5px;
+  margin-left: 15vw;
+}
+#cajanav .botonera-navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+#cajanav .botonera-navbar #navbar a {
+  font-family: "helvetica";
+  font-size: 1.2rem;
+  margin: 15px;
+  color: white;
+  text-decoration: none;
+}
+#cajanav .botonera-navbar #navbar a:hover {
+  background-color: #3ffa84;
+  color: black;
+}
+#cajanav .botonera-navbar .translate {
+  position: absolute;
+}
+#cajanav .botonera-navbar .translate .ico-translate {
+  position: relative;
+  width: 15px;
+  right: -64px;
+  top: 9px;
+  z-index: 1000;
+}
+#cajanav .botonera-navbar .select-lenguaje {
+  font-family: "helvetica";
+  font-size: 14px;
+  margin: 15px;
+  
+  appearance: none;
+  outline: 10px #2E8B57;;
+  border: 0;
+  box-shadow: none;
+ 
+  flex: 1;
+  padding: 0 1em;
+  color: #fff;
+  background-color: #2E8B57;;
+  background-image: none;
+  cursor: pointer;
+
+}
+#cajanav .botonera-navbar .select-lenguaje::-ms-expand {
+  display: none;
+}
+#cajanav .botonera-navbar .select-lenguaje {
+  position: relative;
+  display: flex;
+  width: 93px;
+  height: 3em;
+  border-radius: 0.25em;
+  overflow: hidden;
+}
+#cajanav .botonera-navbar .select-lenguaje::after {
+  content: "▼";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  background-color: #2E8B57;
+  transition: 0.25s all ease;
+  pointer-events: none;
+}
+#cajanav .botonera-navbar .select-lenguaje:hover::after {
+  color: #3ffa84;
+}
+#cajanav .botonera-navbar .select-lenguaje:focus {
+  background-color: #2E8B57;
+}
+#cajanav .botonera-navbar .select-lenguaje option {
+  outline-color: #5ca55c;
+  border: none;
+  appearance: none;
+}
+
+#navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+  align-items: center;
+  width: auto;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  margin: 0;
+  font-size: 1rem; 
+}
+
+.body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+#main {
+  gap: 0.625rem; 
+}
+
+#card:hover {
+  box-shadow: 0 0.2rem 0.7rem rgba(0, 0, 0, 0.444); 
+
+.texto p {
+  font-family: "avenir";
+  text-align: justify;
+}}
+.texto .organizarse {
+  font-size: 1.25rem;
+}
+.texto ul li {
+  font-family: "roboto";
+  font-size: 1.15rem;
+}
+
+#caja2 {
+  margin-top: 6rem;
+}
+#caja2 #cajatarjes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#caja2 #card {
+  font-size: 1rem; 
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 0.9375rem; 
+  border-radius: 0.1875rem; 
+}
+
+
+#caja2 #tablaFirmas {
+  width: 100%;
+  font-family: "lato";
+  border-collapse: collapse;
+  box-shadow: 0 0.1rem 0.5rem rgba(30, 29, 29, 0.182); 
+  transition: 0.3s;
+}
+
+#caja2 #tablaFirmas:hover { box-shadow: 0 0.2rem 0.7rem rgba(0, 0, 0, 0.444);
+
+}
+ span {padding: 0.5rem; } 
+#caja2 #tablaFirmas thead th {
+  background-color: #275941;
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  height: 45px;
+}
+#caja2 #tablaFirmas tbody {
+  text-align: center;
+}
+#caja2 #tablaFirmas th,
+#caja2 #tablaFirmas td {
+  height: 35px;
+}
+#caja2 #divtwit {
+  margin-top: 6rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#caja2 #divtwit > div {
+  margin-bottom: 4rem;
+}
+
+.imagen-largo {
+  width: 100%;
+}
+
+.resaltado {
+  font-family: "avenir-bold" !important;
+}
+
+.declaracion {
+  font-size: 1rem;
+}
+
+footer {
+  background-color: #2E8B57;
+  color: rgb(230, 225, 225);
+  text-align: center;
+  padding: 0.625rem; 
+  margin: 0;
+  font-family: "helvetica";
+}
+
+.btn-mobile-firma {
+  display: none;
+}
+
+.enlaces {
+  text-decoration: none;
+  color: rgb(230, 225, 225);
+  margin: 0.3125rem; 
+  border-radius: 0.1875rem; 
+  transition: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+.enlaces:hover {
+  background-color: #3ffa84;
+  text-decoration: underline;
+  text-decoration: none;
+  color: black;
+  padding: 13px;
+  border-radius: 5px;
+}
+
+.container-btn-sm-firma {
+  display: none;
+}
+
+@media (max-width: 320px) {
+  #navbar {
+    width: 90%;
+  }
+  #main {
+    grid-template-columns: 1fr;
+  }
+  #card {
+    width: 90%;
+    height: auto;
+    font-size: 0.875rem; 
+  }
+  .subtitulo {
+    font-size: 1.4rem; 
+  }
+  .declaracion {
+    font-size: 0.9rem; 
+  }
+}
+@media (max-width: 480px) and (min-width: 1px) {
+  .container-btn-sm-firma {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3.5rem;
+  }
+  .container-btn-sm-firma .btn-sm-firma {
+    display: block;
+    width: 246px;
+    height: 65px;
+    border-radius: 30px;
+    background-color: #86f46f;
+    font-family: arial;
+    font-size: 23px;
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    padding-top: 18px;
+    border: 1px solid grey;
+  }
+}
+@media (max-width: 480px) {
+  header {
+    height: 65px;
+  }
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  #navbar {
+    width: 100%;
+    display: none;
+  }
+  #main {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  #card {
+    width: 95%;
+    height: auto;
+    font-size: 0.9rem; 
+  }
+  .titulo {
+    font-size: 1em;
+  }
+  .imagen {
+    background-position: center;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+  .subtitulo {
+    font-size: 1.6rem;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+  }
+  .declaracion {
+    font-size: 1rem; 
+  }
+  #divtwit .marco-tw {
+    width: 100%;
+  }
+}
+@media (max-width: 568px) and (min-width: 480px) {
+  #navbar {
+    width: 100%;
+  }
+  #main {
+    grid-template-columns: 1fr;
+  }
+  #card {
+    width: 95%;
+    height: auto;
+    font-size: 0.9rem; 
+  }
+  .titulo {
+    font-size: 1em;
+  }
+  .subtitulo {
+    font-size: 1.5rem;
+  }
+  .declaracion {
+    font-size: 1rem; 
+  }
+}
+@media (max-width: 640px) and (min-width: 569px) {
+  #cajanav .botonera-navbar #navbar {
+    width: 100%;
+  }
+  #cajanav .botonera-navbar #navbar a {
+    font-size: 1rem;
+    margin: 10px;
+  }
+  #main {
+    grid-template-columns: 1fr;
+  }
+  #card {
+    width: 95%;
+    height: auto;
+    font-size: 0.9rem; 
+  }
+  .titulo {
+    font-size: 1em;
+  }
+  .subtitulo {
+    font-size: 1.9rem; 
+  }
+  .declaracion {
+    font-size: 1rem; 
+  }
+}
+@media (max-width: 768px) and (min-width: 641px) {
+  #navbar {
+    width: 100%;
+  }
+  #main {
+    grid-template-columns: 1fr;
+  }
+  #card {
+    width: 100%;
+    height: auto;
+    font-size: 1rem; 
+  }
+  .titulo {
+    font-size: 1.5em;
+  }
+  .subtitulo {
+    font-size: 1.8rem; 
+  }
+  .declaracion {
+    font-size: 1.2rem; 
+  }
+}
+@media (min-width: 1280px) and (orientation: landscape) {
+  #navbar {
+    width: 100%;
+  }
+  #main {
+    grid-template-columns: 1fr 1fr;
+  }
+  #card {
+    width: 80%;
+    height: auto;
+    font-size: 1.1rem; 
+  }
+  .subtitulo {
+    font-size: 2.2rem; 
+  }
+  .declaracion {
+    font-size: 1.6rem; 
+  }
+}
+@media (min-width: 1280px) and (orientation: portrait) {
+  #navbar {
+    width: 100%;
+  }
+  #main {
+    grid-template-columns: 1fr;
+  }
+  #card {
+    width: 80%;
+    height: auto;
+    font-size: 1.1rem;
+  }
+  .subtitulo {
+    font-size: 2.2rem; 
+  }
+  .declaracion {
+    font-size: 1.6rem; 
+  }
+}
+@media (max-width: 1024px) and (orientation: landscape) {
+  #navbar {
+    width: 100%;
+  }
+  #main {
+    grid-template-columns: 1fr 1fr;
+  }
+  #card {
+    width: 100%;
+    height: auto;
+    font-size: 1.1rem; 
+  }
+  .subtitulo {
+    font-size: 2rem;
+  }
+  .declaracion {
+    font-size: 1.4rem; 
+  }
+}
+@media (min-width: 1024px) and (orientation: portrait) {
+  #navbar {
+    width: 100%;
+  }
+  #main {
+    grid-template-columns: 1fr;
+  }
+  #card {
+    width: 80%;
+    height: auto;
+    font-size: 1.1rem; 
+  }
+  .subtitulo {
+    font-size: 2.2rem;
+  }
+  .declaracion {
+    font-size: 1.6rem; 
+  }
+}
+@media (max-width: 1440px) and (min-width: 769px) {
+  .subtitulo {
+    font-size: 2.2rem;
+  }
+}
+@media (min-width: 1440px) and (orientation: landscape) {
+  #navbar {
+    width: 100%;
+  }
+  #main {
+    grid-template-columns: 1fr 1fr;
+  }
+  #card {
+    width: 70%;
+    height: auto;
+    font-size: 1.2rem; 
+  }
+  .subtitulo {
+    font-size: 2.4rem; 
+  }
+  .declaracion {
+    font-size: 1.8rem; 
+  }
+}
+@media (min-width: 1440px) and (orientation: portrait) {
+  #navbar {
+    width: 100%;
+  }
+  #main {
+    grid-template-columns: 1fr;
+  }
+  #card {
+    width: 80%;
+    height: auto;
+    font-size: 1.1rem; 
+  }
+  .subtitulo {
+    font-size: 2.2rem; 
+  }
+  .declaracion {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-aspect-ratio: 19.5/9) {
+    .titulo {
+        font-size: 1rem;
+    }
+}
+@media screen {
+    .titulo
+    {overflow:hidden;
+     text-overflow:ellipsis;
+
+    }
+ }
+/*# sourceMappingURL=estilos.css.map */
