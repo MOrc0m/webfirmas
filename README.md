@@ -11,12 +11,12 @@ Este proyecto es un **sitio web para la recolección de firmas** en apoyo a una 
 ## Demo del Proyecto
 
 Puedes ver una demostración del proyecto en el siguiente enlace:  
-[Ver Demo](#)
+[Ver Demo](https://stirring-starlight-564a3d.netlify.app/)
 
 ## Nota Importante
 
 El contenido del sitio en este repositorio es solo *placeholder* y tiene el propósito de visualizar la estructura y funcionalidad del sitio. Para ver el contenido real, por favor visita el sitio del cliente:  
-[Visitar Sitio del Cliente](#)
+[Visitar Sitio del Cliente](https://solidaridadmovimientossociales.ar/)
 
 ## Disclaimer
 
