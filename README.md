@@ -2,6 +2,8 @@
 
 Este proyecto es un **sitio web para la recolección de firmas** en apoyo a una petición, similar a plataformas como *Change.org*. Fue desarrollado para un cliente utilizando las siguientes tecnologías:
 
+Para este proyecto me encargue tanto del Front-end, como del Back-end y la adminitracion del servidor y el deployment del sitio
+
 - **[PHP](https://www.php.net/)**
 - **[MySQL](https://www.mysql.com/)**
 - **[CSS/SCSS](https://sass-lang.com/)**
